@@ -1,0 +1,48 @@
+<div
+  class="d-flex flex-column flex-shrink-0 bg-light"
+  style="width: 100px; height: 100%;"
+>
+<!-- <h6 class="m-3 pt-2">FIFA App</h6> -->
+  <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+    <li>
+      <a
+        [routerLink]="['/home']"
+        routerLinkActive="active"
+        class="nav-link py-3 border-bottom"
+        aria-current="page"
+        title="Home"
+        data-bs-toggle="tooltip"
+        data-bs-placement="right"
+        data-bs-original-title="Home"
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <a
+        [routerLink]="['/find-by-id']"
+        routerLinkActive="active"
+        class="nav-link py-3 border-bottom"
+        title=""
+        data-bs-toggle="tooltip"
+        data-bs-placement="right"
+        data-bs-original-title="Dashboard"
+      >
+        Buscar Por ID
+      </a>
+    </li>
+    <li>
+      <a
+        [routerLink]="['/find-by-date']"
+        routerLinkActive="active"
+        class="nav-link py-3 border-bottom"
+        title=""
+        data-bs-toggle="tooltip"
+        data-bs-placement="right"
+        data-bs-original-title="Orders"
+      >
+        Buscar Por fecha
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,23 @@
+.card-team__container {
+  min-width: calc(100vw - 115px);
+  box-sizing: border-box;
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  .card-team{
+    cursor: pointer;
+    min-height: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
