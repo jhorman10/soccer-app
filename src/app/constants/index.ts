@@ -1,0 +1,9 @@
+export const POST_LOGIN = '/login';
+export const POST_LOGOUT = '/logout';
+export const GET_LIST_TEAMS = '/equipos/listar';
+export const GET_0_TO_100 = '/0/100'
+export const POST_CREATE_TEAM = '/equipos/crear';
+export const GET_TEAM_BY_INIT_DATE_END_DATE = '/equipos/consultar/';
+export const GET_TEAM_BY_ID = '/equipos/consultar/';
+export const PUT_TEAM_BY_ID = '/equipos/actualizar/';
+export const DELETE_TEAM_BY_ID = '/equipos/eliminar/';
