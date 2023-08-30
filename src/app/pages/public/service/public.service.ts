@@ -8,7 +8,7 @@ import {
   GET_TEAM_BY_INIT_DATE_END_DATE,
   POST_LOGIN,
 } from 'src/app/constants';
-import { Team } from 'src/app/models';
+import { Content, Team } from 'src/app/models';
 
 @Injectable({
   providedIn: 'root',
@@ -28,15 +28,18 @@ export class PublicService {
     return this.http.get<Team>(url);
   }
 
-  getTeamByInitAndEndDate(initDate: string, endDate: string): Observable<Team> {
+  getTeamByInitAndEndDate(
+    initDate: string,
+    endDate: string
+  ): Observable<Content[]> {
     const url = `${this.baseUrl}${GET_TEAM_BY_INIT_DATE_END_DATE}${initDate}/${endDate}`;
     console.log(url);
 
-    return this.http.get<Team>(url);
+    return this.http.get<Content[]>(url);
   }
 
-  getTeamById(id: number): Observable<Team> {
+  getTeamById(id: number): Observable<Content> {
     const url = `${this.baseUrl}${GET_TEAM_BY_ID}${id}`;
-    return this.http.get<Team>(url);
+    return this.http.get<Content>(url);
   }
 }

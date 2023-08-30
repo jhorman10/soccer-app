@@ -1,1 +1,54 @@
-<p>find-by-id works!</p>
+<div class="find-by-id__container">
+  <div class="input-group mb-3" style="max-width: 400px">
+    <input
+      type="number"
+      class="form-control"
+      [(ngModel)]="searchId"
+      placeholder="ID del equipo"
+      aria-label="ID del equipo"
+      aria-describedby="button-addon2"
+    />
+    <button
+      class="btn btn-outline-primary"
+      type="button"
+      id="button-addon2"
+      (click)="searchTeamById()"
+    >
+      Buscar
+    </button>
+  </div>
+  <div *ngIf="team">
+    <div class="card border-info mb-3 card-team" style="max-width: 18rem">
+      <div class="card-header">{{ team.nombre }}</div>
+      <div class="card-body">
+        <h5 class="card-title">
+          <strong>Estadio</strong> : {{ team.estadio }}
+        </h5>
+        <p *ngIf="team.sitioWeb" class="card-text">
+          <strong>Sitio Web</strong> :
+          <a href="{{ team.sitioWeb }}" target="_blank">
+            {{ team.sitioWeb }}
+          </a>
+        </p>
+        <p class="card-text">
+          <strong>Nacionalidad</strong> : {{ team.nacionalidad }}
+        </p>
+        <p class="card-text">
+          <strong>Fundacion</strong> : {{ team.fundacion }}
+        </p>
+        <p class="card-text">
+          <strong>Entrenador</strong> : {{ team.entrenador }}
+        </p>
+        <p class="card-text">
+          <strong>Capacidad</strong> : {{ team.capacidad | number }}
+        </p>
+        <p *ngIf="team.valor" class="card-text">
+          <strong>Valor</strong> : {{ team.valor | currency }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="team === null">
+    <p>No se encontró ningún equipo con ese ID.</p>
+  </div>
+</div>
