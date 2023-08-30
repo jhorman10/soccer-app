@@ -1,0 +1,18 @@
+<div class="card-team__container">
+  <div
+    *ngFor="let team of listOfTeams"
+    class="card text-white bg-dark mb-3 card-team"
+    style="max-width: 18rem"
+  >
+    <div class="card-header">{{ team.nombre }}</div>
+    <div class="card-body">
+      <h5 class="card-title">{{ team.estadio }}</h5>
+      <p class="card-text">{{ team.sitioWeb }}</p>
+      <p class="card-text">{{ team.nacionalidad }}</p>
+      <p class="card-text">{{ team.fundacion }}</p>
+      <p class="card-text">{{ team.entrenador }}</p>
+      <p class="card-text">{{ team.capacidad | number }}</p>
+      <p class="card-text">{{ team.valor | currency }}</p>
+    </div>
+  </div>
+</div>
