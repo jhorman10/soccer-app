@@ -1,6 +1,6 @@
 <div
   class="card border-info mb-3 card-team"
-  style="width: 18rem; height: 380px"
+  style="max-width: 18rem; height: 380px"
 >
   <div class="card-header">{{ team.nombre }}</div>
   <div class="card-body">
@@ -22,5 +22,9 @@
     <p *ngIf="team.valor" class="card-text">
       <strong>Valor</strong> : {{ team.valor | currency }}
     </p>
+  </div>
+  <div class="container">
+    <button type="button" class="btn btn-danger mb-3" (click)="deleteTeam(team.id)">Borrar</button>
+    <button type="button" class="btn btn-secondary mb-3" (click)="redirectToEdit(team.id)">Editar</button>
   </div>
 </div>

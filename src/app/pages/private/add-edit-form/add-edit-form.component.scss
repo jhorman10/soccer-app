@@ -3,4 +3,9 @@
   height: 94vh;
   box-sizing: border-box;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }

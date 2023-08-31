@@ -1,6 +1,6 @@
 .find-by-id__container {
   height: 100vh;
-  width: calc(100vw - 115px);
+  width: calc(100vw - 100px);
   box-sizing: border-box;
   padding: 25px;
   display: flex;
@@ -11,7 +11,7 @@
   align-items: center;
   gap: 20px;
 
-  .card-team{
+  .card-team {
     cursor: pointer;
     min-height: 400px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
