@@ -1,4 +1,4 @@
-.find-by-date__container{
+.find-by-date__container {
   width: calc(100vw - 115px);
   height: 100vh;
   box-sizing: border-box;
@@ -11,18 +11,22 @@
   align-items: center;
   gap: 20px;
 
-  .result-container{
+  .result-container {
     display: flex;
+    padding: 30px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: center;
-    align-items: flex-start;
+    align-content: flex-start;
+    align-items: center;
     max-height: 600px;
     overflow: auto;
-    border: 1px solid #9e9898c0;
+    gap: 20px;
+    border-radius: 5px;
+    border: 1px solid #c4bbbb;
+    box-shadow: 0px 0px 20px 5px #d4d4d4;
 
-    .card-team{
+    .card-team {
       cursor: pointer;
       min-height: 400px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;

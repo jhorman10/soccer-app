@@ -4,8 +4,7 @@ import { Observable } from 'rxjs';
 import {
   DELETE_TEAM_BY_ID,
   POST_CREATE_TEAM,
-  POST_LOGOUT,
-  PUT_TEAM_BY_ID,
+  PUT_TEAM_BY_ID
 } from 'src/app/constants';
 import { Team } from 'src/app/models';
 
@@ -16,11 +15,6 @@ export class PrivateService {
   private baseUrl: string = 'https://wo-fifa.azurewebsites.net';
 
   constructor(private http: HttpClient) {}
-
-  logout(): Observable<unknown> {
-    const url = `${this.baseUrl}${POST_LOGOUT}`;
-    return this.http.post(url, {});
-  }
 
   createTeam(teamData: Team): Observable<any> {
     const url = `${this.baseUrl}${POST_CREATE_TEAM}`;

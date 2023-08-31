@@ -1,31 +1,5 @@
 <div class="card-team__container">
-  <div
-    *ngFor="let team of listOfTeams"
-    class="card border-info mb-3 card-team"
-    style="max-width: 18rem"
-  >
-    <div class="card-header">{{ team.nombre }}</div>
-    <div class="card-body">
-      <h5 class="card-title"><strong>Estadio</strong> : {{ team.estadio }}</h5>
-      <p *ngIf="team.sitioWeb" class="card-text">
-        <strong>Sitio Web</strong> :
-        <a href="{{ team.sitioWeb }}" target="_blank">
-          {{ team.sitioWeb }}
-        </a>
-      </p>
-      <p class="card-text">
-        <strong>Nacionalidad</strong> : {{ team.nacionalidad }}
-      </p>
-      <p class="card-text"><strong>Fundacion</strong> : {{ team.fundacion }}</p>
-      <p class="card-text">
-        <strong>Entrenador</strong> : {{ team.entrenador }}
-      </p>
-      <p class="card-text">
-        <strong>Capacidad</strong> : {{ team.capacidad | number }}
-      </p>
-      <p *ngIf="team.valor" class="card-text">
-        <strong>Valor</strong> : {{ team.valor | currency }}
-      </p>
-    </div>
+  <div   *ngFor="let team of listOfTeams">
+    <app-card-team [team]="team"></app-card-team>
   </div>
 </div>
