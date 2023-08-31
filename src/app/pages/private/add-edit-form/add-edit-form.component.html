@@ -1,1 +1,103 @@
-<p>add-edit-form works!</p>
+<section class="add-edit-form__container">
+  <form class="row g-3 p-5 d-flex" (ngSubmit)="onSubmit()">
+    <div class="col-md-6">
+      <label class="form-label" for="nombre">Nombre:</label>
+      <input
+        class="form-control"
+        type="text"
+        id="nombre"
+        [(ngModel)]="team.nombre"
+        name="nombre"
+        required
+      />
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label" for="estadio">Estadio:</label>
+      <input
+        class="form-control"
+        type="text"
+        id="estadio"
+        [(ngModel)]="team.estadio"
+        name="estadio"
+        required
+      />
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label" for="sitioWeb">Sitio Web:</label>
+      <input
+        class="form-control"
+        type="text"
+        id="sitioWeb"
+        [(ngModel)]="team.sitioWeb"
+        name="sitioWeb"
+      />
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label" for="nacionalidad">Nacionalidad:</label>
+      <input
+        class="form-control"
+        type="text"
+        id="nacionalidad"
+        [(ngModel)]="team.nacionalidad"
+        name="nacionalidad"
+        required
+      />
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label" for="fundacion">Fundación:</label>
+      <input
+        class="form-control"
+        type="text"
+        id="fundacion"
+        [(ngModel)]="team.fundacion"
+        name="fundacion"
+        required
+      />
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label" for="entrenador">Entrenador:</label>
+      <input
+        class="form-control"
+        type="text"
+        id="entrenador"
+        [(ngModel)]="team.entrenador"
+        name="entrenador"
+        required
+      />
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label" for="capacidad">Capacidad:</label>
+      <input
+        class="form-control"
+        type="number"
+        id="capacidad"
+        [(ngModel)]="team.capacidad"
+        name="capacidad"
+        required
+      />
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label" for="valor">Valor:</label>
+      <input
+        class="form-control"
+        type="number"
+        id="valor"
+        [(ngModel)]="team.valor"
+        name="valor"
+      />
+    </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">
+        {{ isEditing ? "Actualizar" : "Crear" }}
+      </button>
+    </div>
+  </form>
+</section>
